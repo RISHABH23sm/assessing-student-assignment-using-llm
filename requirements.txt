@@ -1,2 +1,7 @@
 streamlit
 python-docx
+streamlit
+python-docx
+lxml
+langchain
+langchain-groq
