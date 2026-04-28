@@ -103,7 +103,7 @@ def extract_number(text):
     nums = re.findall(r"\d+", text)
     if nums:
         n = int(nums[0])
-        if n > 10: n = 10
+        if n > 100: n = 100
         return n
     return 0
 
