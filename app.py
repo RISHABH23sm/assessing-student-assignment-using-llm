@@ -9,7 +9,7 @@ Original file is located at
 
 import os
 import streamlit as st
-os.environ["GROQ_API_KEY"]="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"
+api_key = os.getenv("GROQ_API_KEY")
 from docx import Document
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
