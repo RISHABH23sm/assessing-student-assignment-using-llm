@@ -47,7 +47,7 @@ def get_models():
     return {
         "LLaMA-3-8B": ChatGroq(model="llama-3.1-8b-instant", temperature=0),
         "Mixtral-8x7B": ChatGroq(model="openai/gpt-oss-120b", temperature=0),
-        "Gemma-7B": ChatGroq(model="meta-llama/llama-4-maverick-17b-128e-instruct", temperature=0),
+        "LLaMA-3.1-8B": ChatGroq(model="llama-3.1-8b-instant", temperature=0),
         "LLaMA-3-70B": ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
     }
 
