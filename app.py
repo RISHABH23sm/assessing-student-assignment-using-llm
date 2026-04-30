@@ -155,7 +155,14 @@ if uploaded_file and teacher_question:
         st.write(f"*Average AI Probability:* {avg_ai:.2f}%")
         st.write(f"*Average Marks (out of 10):* {avg_marks:.2f}")
 
-        st.bar_chart({"AI Probability (%)": [avg_ai], "Marks (out of 10)": [avg_marks]})
+        import pandas as pd
+
+chart_data = pd.DataFrame({
+    "Metric": ["AI Probability (%)", "Marks (%)"],
+    "Value": [avg_ai, avg_marks * 10]   # 🔥 marks convert to %
+})
+
+st.bar_chart(chart_data.set_index("Metric"))
 else:
     st.info("✍️ Enter the teacher's question and upload the assignment to start.")
 
