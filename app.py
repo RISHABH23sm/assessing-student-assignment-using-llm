@@ -147,6 +147,12 @@ if uploaded_file and teacher_question:
             avg_ai = 18
             avg_marks = 7.5
             verdict = "🧍 Mostly Human-written"
+        if avg_ai > 65:
+            verdict = "🧠 Mostly AI-generated"
+        elif avg_ai > 40:
+            verdict = "⚖️ Possibly AI-assisted"
+        else:
+            verdict = "🧍‍♂️ Mostly Human-written"
 
         st.subheader("📊 Final Evaluation Summary")
         st.write(f"*Final Verdict:* {verdict}")
